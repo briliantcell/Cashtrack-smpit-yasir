@@ -2272,7 +2272,7 @@
                             ticks: {
                                 color: textColor,
                                 callback: function(value) {
-                                    return formatCurrency(value);
+                                    return formatCurrency(value);1
                                 }
                             }
                         }
@@ -2312,6 +2312,25 @@
                 }
             });
         });
+    import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC4Ddz1c6N5zb2gCwvZsibewEMVao3Igz8",
+  authDomain: "cashtrack-739d1.firebaseapp.com",
+  projectId: "cashtrack-739d1",
+  storageBucket: "cashtrack-739d1.firebasestorage.app",
+  messagingSenderId: "30741192838",
+  appId: "1:30741192838:web:fb0af05384efb36257f107",
+  measurementId: "G-M1V5WLFJBC"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+export { app, auth, db };
     </script>
 </body>
-    </html>
+</html>
